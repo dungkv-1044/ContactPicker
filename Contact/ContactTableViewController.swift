@@ -105,8 +105,7 @@ class ContactTableViewController: UITableViewController {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.accessoryType = .none
         let contactKey = contactSection[indexPath.section]
-        if let contactValues = contactDict[contactKey.uppercased()] {
-            
+        if contactDict[contactKey.uppercased()] != nil {            
             let key = (cell?.textLabel?.text)! + "#" + (cell?.detailTextLabel?.text)!
             ContactServices.sharedContact.selectedContacts.removeValue(forKey: key)
             
