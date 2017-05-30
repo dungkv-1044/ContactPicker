@@ -131,13 +131,20 @@ class ContactTableViewController: UITableViewController, UISearchResultsUpdating
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.accessoryType = .checkmark
-        let contactKey = contactSection[indexPath.section]
-        if let contactValues = contactDict[contactKey.uppercased()] {
-            let contact = contactValues[indexPath.row]
+        if searchController.isActive && searchController.searchBar.text != "" {
+            let contact = self.filteredArray[indexPath.row]
             let key = (cell?.textLabel?.text)! + "#" + (cell?.detailTextLabel?.text)!
             ContactServices.sharedContact.selectedContacts[key] = contact
-
+        } else {
+            let contactKey = contactSection[indexPath.section]
+            if let contactValues = contactDict[contactKey.uppercased()] {
+                let contact = contactValues[indexPath.row]
+                let key = (cell?.textLabel?.text)! + "#" + (cell?.detailTextLabel?.text)!
+                ContactServices.sharedContact.selectedContacts[key] = contact
+                
+            }
         }
+        
        
         
     }
@@ -145,12 +152,19 @@ class ContactTableViewController: UITableViewController, UISearchResultsUpdating
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.accessoryType = .none
-        let contactKey = contactSection[indexPath.section]
-        if contactDict[contactKey.uppercased()] != nil {            
+        if searchController.isActive && searchController.searchBar.text != "" {
             let key = (cell?.textLabel?.text)! + "#" + (cell?.detailTextLabel?.text)!
             ContactServices.sharedContact.selectedContacts.removeValue(forKey: key)
             
+        } else {
+            let contactKey = contactSection[indexPath.section]
+            if contactDict[contactKey.uppercased()] != nil {
+                let key = (cell?.textLabel?.text)! + "#" + (cell?.detailTextLabel?.text)!
+                ContactServices.sharedContact.selectedContacts.removeValue(forKey: key)
+                
+            }
         }
+        
     }
     
     func filterContentForSearch(name: String) {
