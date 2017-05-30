@@ -14,6 +14,9 @@
 		3C2B074D1EDBCDF900BB87AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2B074B1EDBCDF900BB87AA /* LaunchScreen.storyboard */; };
 		3C2B07581EDBCDF900BB87AA /* ContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B07571EDBCDF900BB87AA /* ContactTests.swift */; };
 		3C2B07631EDBCDF900BB87AA /* ContactUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B07621EDBCDF900BB87AA /* ContactUITests.swift */; };
+		3C2B07711EDBD6D200BB87AA /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B07701EDBD6D200BB87AA /* ContactTableViewController.swift */; };
+		3C2B07731EDBD71E00BB87AA /* ContactServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B07721EDBD71E00BB87AA /* ContactServices.swift */; };
+		3C2B07751EDBD74900BB87AA /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B07741EDBD74900BB87AA /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		3C2B075E1EDBCDF900BB87AA /* ContactUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2B07621EDBCDF900BB87AA /* ContactUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUITests.swift; sourceTree = "<group>"; };
 		3C2B07641EDBCDF900BB87AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C2B07701EDBD6D200BB87AA /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
+		3C2B07721EDBD71E00BB87AA /* ContactServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactServices.swift; sourceTree = "<group>"; };
+		3C2B07741EDBD74900BB87AA /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				3C2B07491EDBCDF900BB87AA /* Assets.xcassets */,
 				3C2B074B1EDBCDF900BB87AA /* LaunchScreen.storyboard */,
 				3C2B074E1EDBCDF900BB87AA /* Info.plist */,
+				3C2B07701EDBD6D200BB87AA /* ContactTableViewController.swift */,
+				3C2B07721EDBD71E00BB87AA /* ContactServices.swift */,
+				3C2B07741EDBD74900BB87AA /* Contact.swift */,
 			);
 			path = Contact;
 			sourceTree = "<group>";
@@ -259,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C2B07731EDBD71E00BB87AA /* ContactServices.swift in Sources */,
 				3C2B07451EDBCDF900BB87AA /* ViewController.swift in Sources */,
+				3C2B07751EDBD74900BB87AA /* Contact.swift in Sources */,
 				3C2B07431EDBCDF900BB87AA /* AppDelegate.swift in Sources */,
+				3C2B07711EDBD6D200BB87AA /* ContactTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
